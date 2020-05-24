@@ -6,13 +6,15 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.produtos.apirest.models.Produto;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(value="/api")
 @Api(value="API REST - Produtos")
-@CrossOrigin(origins = "*")
+
 public class ProdutoResource {
 
     @Autowired
